@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+{% block head %}
+  {% include "inc/head.html.j2" %}
+{% endblock head %}
+
+<body>
+
+  {% block top_nav %}
+    <nav class="navbar">
+      <form class="" action="index.html" method="post">
+        <input type="text" name="" value="">
+        <button type="button" name="button">搜索</button>
+      </form>
+    </nav>
+  {% endblock top_nav %}
+
+  <!-- body start -->
+  {% block body %}
+
+  {% endblock %}<!-- body end ! -->
+
+  {% block bottom %}
+    {% include "inc/bottom.html.j2" %}
+  {% endblock %}
+</body>
+</html>

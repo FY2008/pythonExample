@@ -1,0 +1,24 @@
+<head>
+  <!-- meta -->
+  {% block meta %}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% endblock meta%} <!-- meta end ! -->
+  <!-- title -->
+  {% block title %}
+    <title>{% if meta_title %}{{ meta_title }}{% else %}中心线{% endif %}</title>
+  {% endblock %}<!-- title end ! -->
+  <!-- link -->
+  {% block link %}
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename = 'images/favicon.png') }}"
+type="image/x-icon">
+  {% endblock %} <!-- link end ! -->
+  <!-- head javascript -->
+  {% block script_head %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/moment.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/my-script.js') }}"></script>
+  {% endblock %} <!-- head javascript end ! -->
+</head>
