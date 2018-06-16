@@ -1,0 +1,142 @@
+{% load static %} {% comment %} 主体内容 {% endcomment %}
+<main id="main" class="site-main col-md-8 col-sm-12" role="main">
+  <!-- 文章区域 -->
+  <article class="col-md-12">
+    <!-- 文章头部信息 -->
+    <header class="entry-header">
+      <div class="entry-thumbnail">
+        <img src="{% static 'blog/images/01_Article1.jpg' %}" class="img-fluid" alt="" height="760" width="1140">
+      </div>
+      <div class="entry-meta">
+        <p>文章信息</p>
+      </div>
+      <h1 class="title">Explore new places every single day</h1>
+    </header>
+    <!-- 文章正文部分 -->
+    <div class="entry-content">
+      <p>Integer at pharetra metus, non porttitor lorem. Pellentesque consectetur lacus at erat maximus fringilla. Mauris suscipit
+        commodo lacus id rutrum. Suspendisse potenti. Vestibulum cursus lobortis suscipit. Pellentesque vel eleifend urna.
+        Praesent id pellentesque metus. Aenean accumsan ipsum ac consectetur convallis. Sed efficitur blandit turpis ut rhoncus.
+        Integer vehicula risus eget purus porttitor gravida. Ut dapibus aliquet quam, non tempus elit varius non. Aliquam
+        rutrum molestie ipsum eu feugiat.</p>
+      <p>In hac habitasse platea dictumst. Nullam vulputate fringilla nisl, non finibus lorem vulputate non. Donec non finibus
+        ex. Curabitur quis elit sit amet nunc finibus volutpat vitae vitae enim. Vestibulum eget eros nec eros maximus cursus.
+        Vestibulum et felis hendrerit, pellentesque mi quis, semper neque. Aliquam et elit metus.</p>
+      <p>Nullam scelerisque ipsum vitae turpis luctus placerat. Ut eu odio urna. Sed blandit arcu vitae arcu finibus euismod
+        sed vitae nisi. Nunc rutrum arcu justo, et condimentum felis efficitur ac. Praesent id erat ac felis dignissim commodo.
+        Proin vehicula libero eu suscipit sodales. Vestibulum imperdiet nibh ut ligula semper posuere. Duis felis mauris,
+        luctus eget dui eget, suscipit tempus magna. Duis quis purus sit amet diam condimentum iaculis. Proin varius sapien
+        non erat elementum tincidunt. Phasellus aliquam sodales tellus, sit amet aliquet nisi elementum non. Nam in vulputate
+        sem, in facilisis erat. Fusce auctor risus vel euismod rhoncus.</p>
+    </div>
+    <footer class="entry-footer row">
+      <div class="col-md-8 col-xs-12">
+        <span class="tags-links">
+          <a href="#" class="badge badge-pill badge-primary">编程</a>
+          <a href="#" class="badge badge-pill badge-secondary">Secondary</a>
+          <a href="#" class="badge badge-pill badge-success">Success</a>
+          <a href="#" class="badge badge-pill badge-danger">Danger</a>
+          <a href="#" class="badge badge-pill badge-warning">Warning</a>
+          <a href="#" class="badge badge-pill badge-info">Info</a>
+          <a href="#" class="badge badge-pill badge-light">Light</a>
+          <a href="#" class="badge badge-pill badge-dark">Dark</a>
+        </span>
+      </div>
+      <div class="col-md-4 col-xs-12 pull-right text-right">
+
+      </div>
+    </footer>
+  </article>
+  <!-- 作者区域 -->
+  <div class="author-container w-100 pt-5 pb-5 mb-5">
+    <div class="author row">
+      <div class="author-avatar col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 align-self-center">
+        <img alt="" src="https://secure.gravatar.com/avatar/ebc4018990624b2378fb1c3f191a4560?s=72&amp;d=mm&amp;r=g" srcset="https://secure.gravatar.com/avatar/ebc4018990624b2378fb1c3f191a4560?s=144&amp;d=mm&amp;r=g 2x"
+          class="avatar avatar-72 photo rounded-circle" height="72" width="72">
+      </div>
+      <div class="author-description col">
+        <p class="author-name">
+          <a href="https://colorlib.com/blaskan/author/demoblaskan/" title="Posts by Jane Smith" rel="author">Jane Smith</a>
+        </p>
+        <div class="author-bio">
+          Aenean vehicula orci ac urna molestie, nec pulvinar est lacinia. Vestibulum venenatis porim. ex. Pellentesque mi ipsum, vehicula
+          in scelerisque quis, elementum eget dui. Nulla varius laoreet ipsum eu dignissim. </div>
+      </div>
+    </div>
+  </div>
+  <!-- 相关文章 -->
+  <div class="related-posts row">
+    <div class="related-header col-md-12">
+      <h5>相关文章</h5>
+    </div>
+    <article id="post-23" class="related-post-article col-md-4 col-sm-12">
+      <div class="post-thumbnail">
+        <a href="{% url 'blog:index' %}" rel="bookmark">
+          <img src="{% static 'blog/images/01_Article1-360x270.jpg' %}" class="img-thumbnail"
+            alt="" height="270" width="360">
+        </a>
+      </div>
+        <a href="{% url 'blog:index' %}" rel="bookmark">Explore new places every single day</a>
+    </article>
+    <!-- #post-## -->
+
+    <article id="post-20" class=" related-post-article col-md-4 col-sm-12">
+      <div class="post-thumbnail">
+        <a href="{% url 'blog:index' %}" rel="bookmark">
+          <img src="{% static 'blog/images/01_Article2-360x270.jpg' %}" class="img-thumbnail"
+            alt="" height="270" width="360">
+        </a>
+      </div>
+        <a href="{% url 'blog:index' %}" rel="bookmark">Travel where you want.</a>
+    </article>
+    <!-- #post-## -->
+
+    <article id="post-17" class="related-post-article col-md-4 col-sm-12">
+      <div class="post-thumbnail">
+        <a href="{% url 'blog:index' %}" rel="bookmark">
+          <img src="{% static 'blog/images/01_Article3-360x270.jpg' %}" class="img-thumbnail"
+            alt="" height="270" width="360">
+        </a>
+      </div>
+        <a href="{% url 'blog:index' %}" rel="bookmark">Explore the world</a>
+    </article>
+    <!-- #post-## -->
+
+    <article id="post-23" class="related-post-article col-md-4 col-sm-12">
+        <div class="post-thumbnail">
+          <a href="{% url 'blog:index' %}" rel="bookmark">
+            <img src="{% static 'blog/images/01_Article1-360x270.jpg' %}" class="img-thumbnail"
+              alt="" height="270" width="360">
+          </a>
+        </div>
+          <a href="{% url 'blog:index' %}" rel="bookmark">Explore new places every single day</a>
+      </article>
+      <!-- #post-## -->
+  
+      <article id="post-20" class="related-post-article col-md-4 col-sm-12">
+        <div class="post-thumbnail">
+          <a href="{% url 'blog:index' %}" rel="bookmark">
+            <img src="{% static 'blog/images/01_Article2-360x270.jpg' %}" class="img-thumbnail"
+              alt="" height="270" width="360">
+          </a>
+        </div>
+          <a href="{% url 'blog:index' %}" rel="bookmark">Travel where you want.</a>
+      </article>
+      <!-- #post-## -->
+  
+      <article id="post-17" class="related-post-article col-md-4 col-sm-12">
+        <div class="post-thumbnail">
+          <a href="{% url 'blog:index' %}" rel="bookmark">
+            <img src="{% static 'blog/images/01_Article3-360x270.jpg' %}" class="img-thumbnail"
+              alt="" height="270" width="360">
+          </a>
+        </div>
+          <a href="{% url 'blog:index' %}" rel="bookmark">Explore the world</a>
+      </article>
+      <!-- #post-## -->
+  </div>
+  <!-- 评论区域 -->
+  <div id="comments" class="mb-5">
+
+  </div>
+</main>
