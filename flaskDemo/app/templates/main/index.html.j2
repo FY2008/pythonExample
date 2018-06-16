@@ -1,0 +1,26 @@
+{% extends "main/base.html.j2" %}
+
+
+
+{% block body %}
+  {% for message in get_flashed_messages() %}
+    <strong>{{ message }}</strong>
+  {% endfor %}
+
+<h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}</h1>
+{% if not known %}
+    <p>欢迎行用户</p>
+{% else %}
+    <p>欢迎老用户</p>
+{% endif %}
+本站用户数量 {% if user_count %}{{ user_count }}{% endif %}
+
+
+  <form method="post">
+    {% if form %}
+    {{ form.hidden_tag() }}
+    {{ form.name.label }}{{ form.name(id='my-text-field') }}
+    {{ form.submit() }}
+    {% endif %}
+  </form>
+{% endblock body %}
