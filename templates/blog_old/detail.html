@@ -1,0 +1,32 @@
+{% extends "blog/base.html" %} {% block title %} 中心线 {% endblock title %}
+{% load static %}
+{% load custom_markdown %}
+<!-- content -->
+{% block content %}
+<!-- Blog Post -->
+{% if article %}
+  <h1 class="my-4">{{ article.title }}
+    {% comment %} <span class="badge badge-dark pull-right"><i class="fa fa-eye" aria-hidden="true"> {{ article.views }}</i></span> {% endcomment %}
+  </h1>
+  <div class="card mb-4">
+      <img class="card-img-top" src={% if article.thumbnail %}"{{ article.thumbnail.url }}"{% else %}"http://placehold.it/750x300"{% endif %} height="300px" alt="Card image cap">
+      <div class="card-body">
+        <h2 class="card-title article-title">{{ article.title }}</h2>
+        <span class="badge badge-dark pull-right ml-2"><i class="fa fa-user-circle" aria-hidden="true"> {{ article.author.username }}</i></span>
+        <span class="badge badge-dark pull-right ml-2"><i class="fa fa-clock-o" aria-hidden="true"> {{ article.created_date|date:'Y-m-d' }}</i></span>
+        <span class="badge badge-dark pull-right"><i class="fa fa-eye" aria-hidden="true"> {{ article.views }}</i></span>
+        {{ article.body|custom_markdown }}
+      </div>
+      <div class="card-footer text-muted article-meta">
+          <i class="fa fa-tag" aria-hidden="true"></i> {% if article.tag %}
+              {% for tag in article.tag.all %}
+              <a href="#">{{ tag.name }}</a>
+              {% endfor %}
+            {% endif %}
+      </div>
+    </div>
+{% else %}
+    <h1>无任何文章</h1>
+{% endif %}
+
+{% endblock content %}
